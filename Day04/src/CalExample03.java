@@ -31,17 +31,18 @@ public class CalExample03 {
 	// 논리연산으로 위의 식을 대체합니다. 
 	int x1 = 10; 
 	int y1 = 20; 
-	boolean result4 = 2 <= x && x < 20;
+	boolean result4 = 2 <= x & x < 20;
 	boolean result5 = x1 > 10 && y1 <= 20 && y1 > x1; 
 	// false && true && true = false; ( AND )
-	boolean result6 = x1 > 10 || y1 <= 20 || y1 > x1; 
+	boolean result6 = x1 > 10 || y1 <= 20 | y1 > x1; 
 	// false || true || true = true ( OR ) 
 	boolean result7 = x1 > 10 ^ y1 <= 20 ^ y1 > x1; 
 	// false ^ true ^ true = false (XOR)
 	boolean result8 = result5 ^ result6 || result7 && true; 
 	// false ^ true || false && true
 	boolean result9 = result5 ^ (result6 || result7) && true;
-	// 
+	// false ^ (true || false) && true
+	
 	
 	}
 }
