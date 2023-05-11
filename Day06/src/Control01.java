@@ -52,6 +52,21 @@ public class Control01 {
 			System.out.println("집에가.");
 		}
 		
+		// if ~ (else if) ~ (else) 
+		// 19세 이상, 39세 이하 = 청년저축 대상자
+		// 40세 이상, 60세 이하 = 중장년 카운슬링 대상자 
+		// dsadas
+		// dsadas
+		
+		if( age >= 19 && age <= 39 ) { // 청년 저축 대상자. 
+			System.out.println("자기는 청년이구만! 훌륭해 가입가능");
+		} else if( age >= 40 && age <= 60) { // 중장년 카운슬링 대상자.
+			System.out.println("나네? 중장년 카운슬링 고");
+		//} else if() { else if는 무한정 생성 가능 
+		} else {
+			System.out.println("자기는 19미만이거나 60초과 / 안돼");
+		}
+		
 		
 		System.out.println("프로그램 종료.");
 		
