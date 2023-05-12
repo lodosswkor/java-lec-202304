@@ -30,7 +30,7 @@ public class CharExample {
 		for( int i = 0; i < 26; i++ ) {
 			ascii = (char)(alpha2+i)
 			System.out.println(
-				"문자 : " + (char)(alpha2+i); +  "는 ASCII CODE " 
+				"문자 : " + (char)(alpha2+i) +  "는 ASCII CODE " 
 				+ ascii + " 입니다."
 			); 
 		}
