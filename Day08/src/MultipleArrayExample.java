@@ -27,6 +27,7 @@ public class MultipleArrayExample {
 			         }; 
 		//2-4. For문으로 전체 출력
 		System.out.println("2차원 배열 출력하기");
+		
 		for(int y = 0; y < b2.length ; y ++) { // 층으로 접근 
 			for( int x = 0; x < b2[y].length; x ++) { // 방으로 접근 
 				System.out.println(b2[y][x]);
