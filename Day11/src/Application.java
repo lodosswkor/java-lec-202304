@@ -1,5 +1,6 @@
 //import home.이종석;
-import home.*; 
+import home.*;
+import staticexample.Counter; 
 
 public class Application  {
 
@@ -41,6 +42,8 @@ public class Application  {
 		
 		//엄마 b = new 엄마(); 
 		
+		Counter.plusStaticCounter();
+		Counter.plusStaticCounter();
 		
 		
 	}
