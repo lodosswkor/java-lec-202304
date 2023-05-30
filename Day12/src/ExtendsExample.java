@@ -16,12 +16,12 @@ public class ExtendsExample {
 		Object object = new Child();
 		((Child)object).밥먹다();
 		
-		
+		/*
 		그래픽카드 gc = new 지포스();  // 나는 지포스입니다.  
 		gc.화면출력하다(); 
 		gc = new 라데온(); 
 		gc.화면출력하다(); 
-		
+		*/
 	}
 	
 }
