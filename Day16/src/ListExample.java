@@ -46,20 +46,17 @@ public class ListExample {
 	    
 	    // SET 
 	    Set hashSet = new HashSet(); 
-	    hashSet.add(10); 
-	    hashSet.add(20);
-	    //hashSet.add(new String("이종석"));
+	    hashSet.add(2); 
 	    hashSet.add(1);
-	    hashSet.add(3);
-	    hashSet.add(2);
-	    hashSet.add(2);
+	    hashSet.add(new String("이종석"));
+	    hashSet.add("1");
+	    hashSet.add("3");
+	    hashSet.add("2");
+	    hashSet.add("5");
 	    
 	    System.out.println("------------------------------");
 	    System.out.println(list); 
 	    System.out.println(hashSet); 
-	    
-	    
-	    
 	    
 		
 	}
