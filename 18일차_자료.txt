@@ -1,4 +1,139 @@
 
 
 https://aws.amazon.com
-https://heidisql.com 
+https://heidisql.com ( heidisql )
+
+
+
+host : team.ideatags.io ( IPv4 : 222.239.231.26 ) 
+id : javalec01 , javalec02 
+pwd : 123456789 
+dbname : javalec01, javalec02 
+
+
+
+-- 한줄주석 
+/*
+   여러줄 주석 
+   냥냥냥 
+   
+   CRUD 
+    C : INSERT (데이터 넣기)
+	 R : SELECT (데이터 꺼내기)
+	 U : UPDATE (데이터 수정)
+	 D : DELETE (데이터 삭제) 
+*/
+
+-- 1. 내가 사용할 Database를 만들자.
+-- CREATE DATABASE '데이터베이스명'
+CREATE DATABASE javalec;
+
+-- 2. 데이터베이스 선택(들어가기) 
+USE javalec; 
+
+-- 3. 데이터베이스에 테이블명 확인
+-- 선택된 데이터베이스에 무슨 테이블
+-- 들이 존재하는지 확인 
+SHOW TABLES; 
+SHOW DATABASES; 
+/* DBMS에서 관리하는 데이터베이스 목록 */
+ 
+-- 4. 테이블을 만들자
+-- 학생테이블에는 학번,이름열이 들어가게 만들겠다. 
+CREATE TABLE student (
+   std_id VARCHAR(10),
+   std_name VARCHAR(50) 
+);
+
+
+/*
+std_name CHAR(10)
+std_name2 VARCHAR(10)  
+
+(CHAR) "이종석" -> "이종석       "
+(VARCHAR) "이종석" -> "이종석"
+*/
+
+-- 5. student 테이블에 데이터 넣기
+-- C (Create) 
+INSERT INTO 테이블명 
+(컬럼명,...) VALUES (값,...); 
+
+INSERT INTO student (std_id, std_name)
+VALUES ('10000','lee'); 
+
+INSERT INTO student (std_id, std_name)
+VALUES ('10001','kim'); 
+
+INSERT INTO student (std_id, std_name)
+VALUES ('10002','kang-in'); 
+ 
+-- 6. 데이터들을 봅시다
+-- R (Read) 
+SELECT 컬럼명,.. FROM  테이블명 
+
+SELECT std_id, std_name FROM student;
+SELECT std_name FROM student; 
+SELECT * FROM student; 
+SELECT COUNT(*) FROM student; 
+-- 마치 List.size(); 와 같다. 
+SELECT * FROM student 
+WHERE std_name = 'kang-in'; /* or and */  
+
+-- 7. 데이터를 수정해 봅시다. 
+-- U (Update) 
+UPDATE 테이블 SET 대상컬럼=값,.. WHERE ....
+
+UPDATE student SET std_id = '10010'
+WHERE std_name = 'kang-in'; 
+
+SELECT * FROM student; 
+
+UPDATE student SET std_name = 'haak'; 
+
+UPDATE student SET std_name = 'kang-in'
+WHERE std_name = 'haak' AND std_id='10010'; 
+
+-- 8. 데이터를 삭제한다. 
+-- D (Delete) 
+DELETE FROM 테이블 (WHERE)
+
+DELETE FROM student WHERE std_id='10000';
+
+SELECT * FROM student;  
+
+DELETE FROM student; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
