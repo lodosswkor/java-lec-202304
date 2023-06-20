@@ -1,6 +1,7 @@
 package manager.entity;
 
 /*
+ * List<Student>
  * 학생 클래스 
  * */
 public class Student {
