@@ -1,16 +1,12 @@
 import java.util.*; 
 
 public class SetSortExample {
-
 	public static void main(String args[]) {
-		
 		Set hashSet = new HashSet();
 		hashSet.add(new Student("이종석", 30));
 		hashSet.add(new Student("이종석", 30));
 		System.out.println(hashSet.toString());
-
-	}
-	
+	}	
 }
 
 class Student { // 생략 extends Object {
