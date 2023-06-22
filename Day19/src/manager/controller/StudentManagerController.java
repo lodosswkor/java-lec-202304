@@ -203,12 +203,13 @@ public class StudentManagerController {
     }
 
     private void printListStudent(List<Student> studentList) {
-        String format = "%d   %s   %s학년      %s         %s   ";
+        String format = "%d   %s   %s학년    %s         %s        %s ";
         for(Student student : studentList) {
             String list = String.format(format,
                     student.getStdNo(),
                     student.getName(),
                     student.getGrade(),
+                    student.getScore(),
                     student.getInsertDt(),
                     student.getUpdateDt()
             );

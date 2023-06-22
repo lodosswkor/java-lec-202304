@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CollectionDBConnect {
+	
     private static final List<Student> students = new ArrayList<Student>();
 
     public static List<Student> getConnection() {
