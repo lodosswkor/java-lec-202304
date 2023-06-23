@@ -12,8 +12,8 @@ public class ManagerServiceImpl implements ManagerService {
 
 	//-- Repository 객체 생성 
 	//-- 불변객체 
-	private final Repository repository = new DBRepository(); 
-	//private final Repository repository = new CollectionRepository(); 
+	//private final Repository repository = new DBRepository();  // DB랑 통신하는 Repository
+	private final Repository repository = new CollectionRepository();  // List<Student> collection을 DB로 사용하는 Repository
 	
     @Override
     public Student registerStudent(Student student) throws Exception {
@@ -52,8 +52,13 @@ public class ManagerServiceImpl implements ManagerService {
 	    	// 조건 2. 학생이름을 검색어로 조회한다. 
 	    	list = repository.selectStudent(student.getName());
     	} else {
-    		// 조건 3. 학생번호로 조회 
-    		list = List.of(repository.selectStudent(student.getStdNo()));
+    		// 조건 3. 학생번호로 조회
+			Student std = repository.selectStudent(student.getStdNo());
+			if(std != null) {
+				list = List.of(std);
+			} else {
+				list = List.of(); // new ArrayList<String>(); 과 같음.
+			}
     	}
     	
         return list;

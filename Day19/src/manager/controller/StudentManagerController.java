@@ -140,6 +140,7 @@ public class StudentManagerController {
 
                 service.modifyStudent(student);
                 System.out.println("학생정보를 수정하였습니다.");
+
                 printListTitle();
                 printListStudent(student);
 
@@ -168,7 +169,8 @@ public class StudentManagerController {
         if(students != null && students.size() > 0) {
 
             printListTitle();
-            printListStudent(student);
+            printListStudent(students);
+
             System.out.print("위 학생을 삭제하시겠습니까? (Y/N) : ");
             String command = scanner.nextLine();
 
@@ -219,7 +221,10 @@ public class StudentManagerController {
         System.out.println(studentList.size() + "명이 조회되었습니다.\n");
     }
 
-    private void printListStudent(Student student) {}
+    //-- 오버로딩된 printListStudent(List<Student>) 메서드를 활용
+    private void printListStudent(Student student) {
+        this.printListStudent(List.of(student));
+    }
 
 
 }
